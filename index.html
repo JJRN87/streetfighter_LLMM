@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/arcade.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>To live is to fight, to fight is to live!</h1>
+
+
+    <table>
+        <tr>
+            <td class="imagen_fondo" colspan="4">Street Fighter</td>
+        </tr>
+        <tr>
+            <td>
+                <p class="nombre">Ken</p>
+                <img class="streetfighter" src="img/ken.png" alt="Ken">
+
+            </td>
+            <td>
+                <p class="nombre">Chung Li</p>
+                <img class="streetfighter" src="img/ChunLi.png" alt="ChunLi">
+
+            </td>
+            <td>
+                <p class="nombre">Zangief</p>
+                <img class="streetfighter" src="img/Zangief.png" alt="Zangief">
+
+            </td>
+            <td>
+                <p class="nombre">Dhalsim</p>
+                <img class="streetfighter" src="img/Dhalsim.png" alt="Dhalsim">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="nombre">Ryu</p>
+                <img class="streetfighter" src="img/Ryu.png" alt="Ryu">
+
+            </td>
+            <td>
+                <p class="nombre">E Honda</p>
+                <img class="streetfighter" src="img/EHonda.png" alt="EHonda">
+
+            </td>
+            <td>
+                <p class="nombre">Blanka</p>
+                <img class="streetfighter" src="img/Blanka.png" alt="Blanka">
+
+            </td>
+            <td>
+                <p class="nombre">Guille</p>
+                <img class="streetfighter" src="img/Guille.png" alt="Guille">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="nombre">T Hawk</p>
+                <img class="streetfighter" src="img/THawk.png" alt="THawk">
+
+            </td>
+            <td>
+                <p class="nombre">Feilong</p>
+                <img class="streetfighter" src="img/Feilong.png" alt="Feilong">
+
+            </td>
+            <td>
+                <p class="nombre">DeeJay</p>
+                <img class="streetfighter" src="img/DeeJay.png" alt="DeeJay">
+
+            </td>
+            <td>
+                <p class="nombre">Cammy</p>
+                <img class="streetfighter" src="img/Cammy.png" alt="Cammy">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="nombre">Balrog</p>
+                <img class="streetfighter" src="img/Balrog.png" alt="Balrog">
+
+            </td>
+            <td>
+                <p class="nombre">Vega</p>
+                <img class="streetfighter" src="img/Vega.png" alt="Vega">
+
+            </td>
+            <td>
+                <p class="nombre">Sagat</p>
+                <img class="streetfighter" src="img/Sagat.png" alt="Sagat">
+
+            </td>
+            <td>
+                <p class="nombre">M Bison</p>
+                <img class="streetfighter" src="img/MBison.png" alt="MBison">
+
+            </td>
+        </tr>
+    </table>
+
+    <h2>Formulario de Inscripción para jugar a Street Fighter</h2>
+    <div class="formulario">
+        <form action="mailto:raul.rodriguez@proeducaglobal.com">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for=" nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos">
+
+                <label for="direccion">Dirección Postal:</label>
+                <input type="text" id="Calle" name="calle" placeholder="Calle">
+                <input type="number" id="numero" name="numero" placeholder="Nª">
+                <input type="text" id="piso" name="piso" placeholder="piso">
+                <input type="number" name="codigo postal" id="c.p" placeholder="codigo postal">
+                <input type="text" id="ciudad" name="ciudad" placeholder="ciudad">
+
+                <label for="nombre">Nick</label>
+                <input type="text" id="nick" name="nick">
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Sexo Usuario</legend>
+                <input type="radio" name="hombre" value="hombre">
+                <label for="sexo">Hombre</label>
+                <input type="radio" name="hombre" value="mujer">
+                <label for="sexo">Mujer</label>
+                <input type="radio" name="hombre" value="PrefieroNo">
+                <label for="sexo">Prefiero no decirlo</label>
+
+            </fieldset>
+            <fieldset>
+                <label for="Fecha_nacimiento">Fecha nacimiento</label>
+                <input type="date" id="fecha" name="fecha">
+            </fieldset>
+            <fieldset>
+                <legend>Personajes</legend>
+                <label for="personaje">Selecciona tu personaje favorito:</label>
+                <select id="personaje" name="personaje">
+                    <option value="Vega">Vega</option>
+                    <option value="Sagat">Sagat</option>
+                    <option value="Bison">M Bison</option>
+                    <option value="Balrog">Balrog</option>
+                    <option value="Blanka">Blanka</option>
+                    <option value="Honda">E Honda</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentarios</legend>
+                <textarea></textarea>
+            </fieldset>
+            <div class="botones">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

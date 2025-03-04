@@ -1,0 +1,136 @@
+@font-face {
+    font-family: Street;
+    src: url('street.otf');
+}
+
+:root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+h1 {
+    color:crimson;
+    font-size: 46px;
+    text-align: center;
+}
+
+body {
+    background-image: url(img/fondo2.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: Street;
+}
+
+.imagen_fondo{
+    background-image: url(img/fondocabecera.jpg);
+    text-align: center;
+    opacity: 0.5;
+}
+
+table {
+    width: 600px;
+    height: 800px;
+    border: 10px outset, rgb(237, 175, 5);
+    margin: auto;
+    border-radius: 10px;
+    background-color: black;
+    text-align: center;
+}
+
+tr,td {
+    width: 40px;
+    height: 45px;
+    font-family: Street;
+    border: 2px solid grey;
+    border-radius: 10px;
+    color: darkorange;
+    text-align: center;
+    margin: auto;
+}
+
+
+h2 {
+    font-family: Street;
+    color: crimson;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+
+
+
+/* FORMULARIO */
+
+form {
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    margin: auto;
+}
+
+legend {
+    font-family: Street;
+    font-size: 14px;
+    color: rgb(237, 175, 5);
+}
+
+fieldset {
+    padding: 10px;
+    margin: 15px;
+}
+
+.botones#input {
+    border: 1 px solid crimson;
+    font-family: Street;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    padding-left: 65px;
+    padding-bottom: 10px;
+}
+
+textarea {
+    width: 560px;
+}
+
+
+/*
+.elemento label,
+.elemento input {
+    display: inline-block;
+    width: 10rem;
+}
+
+/* Ejemplo de display: inline-block 
+#ejemplo_display {
+    background-color: brown;
+    width: 800px;
+    height: 300px;
+}
+
+.dentro {
+    background-color: yellowgreen;
+    min-width: 100px;
+    border: 1px solid red;
+    display: inline-block;
+}
+
+
+button{
+    border: 1 px solid crimson;
+    background-color: crimson;
+    font-family: Street;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    padding-left: 65px;
+    padding-bottom: 10px;
+}
+*/
