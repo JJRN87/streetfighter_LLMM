@@ -1,224 +1,342 @@
 
-<!DOCTYPE html>
-<html lang="es">
+/* TIPOGRAFÍA ORIGINAL */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Fighter - Arcade</title>
-    <link rel="icon" href="img/arcade.png" type="image/png">
-    <link rel="stylesheet" href="./styles.css">
-</head>
+@font-face {
+    font-family: Street;
+    src: url('street.otf');
+}
 
-<body>
+/* ESTILOS GENERALES */
 
-    <header>
-        <h1>To live is to fight, to fight is to live!</h1>
-    </header>
+* {
+    box-sizing: border-box;
+}
 
-    <main>
+body {
+    margin: 0;
+    padding: 20px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
+        url('img/fondo2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
 
-        <!-- GALERÍA DE PERSONAJES -->
+h1 {
+    font-family: Street;
+    color: crimson;
+    font-size: clamp(24px, 4vw, 46px);
+    text-align: center;
+    text-shadow: 3px 3px 5px black;
+    margin: 30px auto 40px;
+    line-height: 1.4;
+}
 
-        <table>
-            <tr>
-                <th class="imagen_fondo" colspan="4">
-                    STREET FIGHTER
-                </th>
-            </tr>
+h2 {
+    font-family: Street;
+    color: crimson;
+    font-size: clamp(20px, 3vw, 28px);
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    margin: 50px auto 25px;
+    line-height: 1.5;
+}
 
-            <tr>
-                <td>
-                    <p class="nombre">Ken</p>
-                    <img class="streetfighter" src="img/ken.png" alt="Ken">
-                </td>
-                <td>
-                    <p class="nombre">Chun-Li</p>
-                    <img class="streetfighter" src="img/ChunLi.png" alt="Chun-Li">
-                </td>
-                <td>
-                    <p class="nombre">Zangief</p>
-                    <img class="streetfighter" src="img/Zangief.png" alt="Zangief">
-                </td>
-                <td>
-                    <p class="nombre">Dhalsim</p>
-                    <img class="streetfighter" src="img/Dhalsim.png" alt="Dhalsim">
-                </td>
-            </tr>
+/* TABLA DE PERSONAJES */
 
-            <tr>
-                <td>
-                    <p class="nombre">Ryu</p>
-                    <img class="streetfighter" src="img/Ryu.png" alt="Ryu">
-                </td>
-                <td>
-                    <p class="nombre">E. Honda</p>
-                    <img class="streetfighter" src="img/EHonda.png" alt="E. Honda">
-                </td>
-                <td>
-                    <p class="nombre">Blanka</p>
-                    <img class="streetfighter" src="img/Blanka.png" alt="Blanka">
-                </td>
-                <td>
-                    <p class="nombre">Guile</p>
-                    <img class="streetfighter" src="img/Guille.png" alt="Guile">
-                </td>
-            </tr>
+table {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    padding: 8px;
+    border: 6px outset rgb(237, 175, 5);
+    border-radius: 12px;
+    background-color: #080808;
+    border-spacing: 6px;
+    table-layout: fixed;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
 
-            <tr>
-                <td>
-                    <p class="nombre">T. Hawk</p>
-                    <img class="streetfighter" src="img/THawk.png" alt="T. Hawk">
-                </td>
-                <td>
-                    <p class="nombre">Fei Long</p>
-                    <img class="streetfighter" src="img/Feilong.png" alt="Fei Long">
-                </td>
-                <td>
-                    <p class="nombre">Dee Jay</p>
-                    <img class="streetfighter" src="img/DeeJay.png" alt="Dee Jay">
-                </td>
-                <td>
-                    <p class="nombre">Cammy</p>
-                    <img class="streetfighter" src="img/Cammy.png" alt="Cammy">
-                </td>
-            </tr>
+.imagen_fondo {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55)),
+        url('img/fondocabecera.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 110px;
+    color: #ffcc33;
+    font-family: Street;
+    font-size: clamp(22px, 4vw, 38px);
+    text-align: center;
+    text-shadow: 3px 3px 5px black;
+    border-radius: 8px;
+}
 
-            <tr>
-                <td>
-                    <p class="nombre">Balrog</p>
-                    <img class="streetfighter" src="img/Balrog.png" alt="Balrog">
-                </td>
-                <td>
-                    <p class="nombre">Vega</p>
-                    <img class="streetfighter" src="img/Vega.png" alt="Vega">
-                </td>
-                <td>
-                    <p class="nombre">Sagat</p>
-                    <img class="streetfighter" src="img/Sagat.png" alt="Sagat">
-                </td>
-                <td>
-                    <p class="nombre">M. Bison</p>
-                    <img class="streetfighter" src="img/MBison.png" alt="M. Bison">
-                </td>
-            </tr>
-        </table>
+td {
+    height: 180px;
+    padding: 10px 5px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    background: linear-gradient(#252525, #080808);
+    text-align: center;
+    color: darkorange;
+    transition: 0.25s ease;
+}
 
-        <!-- FORMULARIO DE INSCRIPCIÓN -->
+td:hover {
+    border-color: #ffcc33;
+    background: #303030;
+    box-shadow: 0 0 12px rgba(255, 204, 51, 0.5);
+}
 
-        <h2>Formulario de inscripción para jugar a Street Fighter</h2>
+.nombre {
+    font-family: Street;
+    font-size: 15px;
+    color: #ffcc33;
+    margin: 5px 0 12px;
+    line-height: 1.4;
+}
 
-        <div class="formulario">
+.streetfighter {
+    display: block;
+    width: 100%;
+    max-width: 145px;
+    height: 115px;
+    object-fit: contain;
+    margin: auto;
+    transition: transform 0.25s ease;
+}
 
-            <form action="mailto:raul.rodriguez@proeducaglobal.com"
-                  method="post"
-                  enctype="text/plain">
+td:hover .streetfighter {
+    transform: scale(1.08);
+}
 
-                <fieldset>
-                    <legend>Datos personales</legend>
+/* FORMULARIO */
 
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+.formulario {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
 
-                    <label for="apellidos">Apellidos:</label>
-                    <input type="text" id="apellidos" name="apellidos" required>
+form {
+    padding: 25px;
+    border: 3px solid #d4a017;
+    border-radius: 12px;
+    background-color: rgba(5, 5, 5, 0.94);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
 
-                    <label for="calle">Dirección postal:</label>
-                    <input type="text" id="calle" name="calle" placeholder="Calle">
+fieldset {
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 0 18px;
+}
 
-                    <div class="direccion">
-                        <input type="text" id="numero" name="numero" placeholder="Número" aria-label="Número">
-                        <input type="text" id="piso" name="piso" placeholder="Piso" aria-label="Piso">
-                    </div>
+legend {
+    font-family: Street;
+    font-size: 15px;
+    color: rgb(237, 175, 5);
+    padding: 0 10px;
+    line-height: 1.5;
+}
 
-                    <div class="direccion">
-                        <input type="text" id="cp" name="codigo_postal"
-                               placeholder="Código postal" maxlength="5" inputmode="numeric"
-                               aria-label="Código postal">
-                        <input type="text" id="ciudad" name="ciudad"
-                               placeholder="Ciudad" aria-label="Ciudad">
-                    </div>
+fieldset > label {
+    display: block;
+    margin: 12px 0 7px;
+    color: #eeeeee;
+}
 
-                    <label for="nick">Nick:</label>
-                    <input type="text" id="nick" name="nick" required>
+/* CAMPOS */
 
-                    <label for="correo">Correo electrónico:</label>
-                    <input type="email" id="correo" name="correo" required>
-                </fieldset>
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    background: #202020;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
 
-                <fieldset>
-                    <legend>Sexo usuario</legend>
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #ffcc33;
+    outline-offset: 1px;
+}
 
-                    <div class="opciones">
-                        <label>
-                            <input type="radio" name="sexo" value="hombre">
-                            Hombre
-                        </label>
+input::placeholder,
+textarea::placeholder {
+    color: #aaaaaa;
+}
 
-                        <label>
-                            <input type="radio" name="sexo" value="mujer">
-                            Mujer
-                        </label>
+.direccion {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
 
-                        <label>
-                            <input type="radio" name="sexo" value="PrefieroNo">
-                            Prefiero no decirlo
-                        </label>
-                    </div>
-                </fieldset>
+.direccion input {
+    min-width: 0;
+    flex: 1;
+}
 
-                <fieldset>
-                    <legend>Fecha de nacimiento</legend>
-                    <label for="fecha">Selecciona tu fecha:</label>
-                    <input type="date" id="fecha" name="fecha">
-                </fieldset>
+.opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 10px;
+}
 
-                <fieldset>
-                    <legend>Personajes</legend>
+.opciones label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
 
-                    <label for="personaje">Selecciona tu personaje favorito:</label>
+input[type="radio"] {
+    accent-color: crimson;
+}
 
-                    <select id="personaje" name="personaje">
-                        <option value="">Elige un luchador</option>
-                        <option value="Ken">Ken</option>
-                        <option value="Ryu">Ryu</option>
-                        <option value="ChunLi">Chun-Li</option>
-                        <option value="Zangief">Zangief</option>
-                        <option value="Dhalsim">Dhalsim</option>
-                        <option value="EHonda">E. Honda</option>
-                        <option value="Blanka">Blanka</option>
-                        <option value="Guile">Guile</option>
-                        <option value="THawk">T. Hawk</option>
-                        <option value="Feilong">Fei Long</option>
-                        <option value="DeeJay">Dee Jay</option>
-                        <option value="Cammy">Cammy</option>
-                        <option value="Balrog">Balrog</option>
-                        <option value="Vega">Vega</option>
-                        <option value="Sagat">Sagat</option>
-                        <option value="MBison">M. Bison</option>
-                    </select>
-                </fieldset>
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
 
-                <fieldset>
-                    <legend>Comentarios</legend>
-                    <label for="comentarios">¿Quieres añadir algo?</label>
-                    <textarea id="comentarios" name="comentarios"
-                              rows="4" placeholder="Escribe aquí..."></textarea>
-                </fieldset>
+/* BOTONES */
 
-                <div class="botones">
-                    <input type="submit" value="Enviar inscripción">
-                    <input type="reset" value="Borrar">
-                </div>
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
 
-            </form>
-        </div>
+.botones input {
+    padding: 12px 20px;
+    border: 1px solid #ffcc33;
+    border-radius: 6px;
+    font-family: Street;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s;
+}
 
-    </main>
+input[type="submit"] {
+    background-color: crimson;
+    color: white;
+}
 
-    <footer>
-        <p>STREET FIGHTER · ARCADE EDITION</p>
-    </footer>
+input[type="reset"] {
+    background-color: #333;
+    color: white;
+}
 
-</body>
-</html>
+.botones input:hover {
+    background-color: #ffcc33;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #aaaaaa;
+    font-family: Street;
+    font-size: 12px;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+        background-attachment: scroll;
+    }
+
+    h1 {
+        margin: 20px auto 30px;
+    }
+
+    table {
+        display: block;
+        padding: 5px;
+        border-width: 4px;
+    }
+
+    tbody {
+        display: block;
+    }
+
+    tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    tr:first-child {
+        display: block;
+    }
+
+    .imagen_fondo {
+        display: block;
+        height: auto;
+        min-height: 80px;
+        padding: 20px 5px;
+    }
+
+    td {
+        display: block;
+        height: auto;
+        min-height: 160px;
+        padding: 10px 4px;
+    }
+
+    .nombre {
+        font-size: 12px;
+    }
+
+    .streetfighter {
+        width: 100%;
+        max-width: 115px;
+        height: 100px;
+    }
+
+    form {
+        padding: 12px;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+
+    .direccion {
+        flex-direction: column;
+    }
+
+    .botones {
+        flex-wrap: wrap;
+    }
+
+    .botones input {
+        font-size: 12px;
+    }
+}
