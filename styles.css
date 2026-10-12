@@ -1,136 +1,342 @@
+
+/* TIPOGRAFÍA ORIGINAL */
+
 @font-face {
     font-family: Street;
     src: url('street.otf');
 }
 
-:root {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-}
+/* ESTILOS GENERALES */
 
-h1 {
-    color:crimson;
-    font-size: 46px;
-    text-align: center;
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-image: url(img/fondo2.jpg);
-    background-repeat: repeat;
+    margin: 0;
+    padding: 20px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
+        url('img/fondo2.jpg');
+    background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h1 {
     font-family: Street;
-}
-
-.imagen_fondo{
-    background-image: url(img/fondocabecera.jpg);
+    color: crimson;
+    font-size: clamp(24px, 4vw, 46px);
     text-align: center;
-    opacity: 0.5;
+    text-shadow: 3px 3px 5px black;
+    margin: 30px auto 40px;
+    line-height: 1.4;
 }
-
-table {
-    width: 600px;
-    height: 800px;
-    border: 10px outset, rgb(237, 175, 5);
-    margin: auto;
-    border-radius: 10px;
-    background-color: black;
-    text-align: center;
-}
-
-tr,td {
-    width: 40px;
-    height: 45px;
-    font-family: Street;
-    border: 2px solid grey;
-    border-radius: 10px;
-    color: darkorange;
-    text-align: center;
-    margin: auto;
-}
-
 
 h2 {
     font-family: Street;
     color: crimson;
-    font-size: 28px;
+    font-size: clamp(20px, 3vw, 28px);
     text-align: center;
+    text-shadow: 2px 2px 4px black;
+    margin: 50px auto 25px;
+    line-height: 1.5;
 }
 
+/* TABLA DE PERSONAJES */
 
+table {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    padding: 8px;
+    border: 6px outset rgb(237, 175, 5);
+    border-radius: 12px;
+    background-color: #080808;
+    border-spacing: 6px;
+    table-layout: fixed;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
 
+.imagen_fondo {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55)),
+        url('img/fondocabecera.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 110px;
+    color: #ffcc33;
+    font-family: Street;
+    font-size: clamp(22px, 4vw, 38px);
+    text-align: center;
+    text-shadow: 3px 3px 5px black;
+    border-radius: 8px;
+}
 
+td {
+    height: 180px;
+    padding: 10px 5px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    background: linear-gradient(#252525, #080808);
+    text-align: center;
+    color: darkorange;
+    transition: 0.25s ease;
+}
+
+td:hover {
+    border-color: #ffcc33;
+    background: #303030;
+    box-shadow: 0 0 12px rgba(255, 204, 51, 0.5);
+}
+
+.nombre {
+    font-family: Street;
+    font-size: 15px;
+    color: #ffcc33;
+    margin: 5px 0 12px;
+    line-height: 1.4;
+}
+
+.streetfighter {
+    display: block;
+    width: 100%;
+    max-width: 145px;
+    height: 115px;
+    object-fit: contain;
+    margin: auto;
+    transition: transform 0.25s ease;
+}
+
+td:hover .streetfighter {
+    transform: scale(1.08);
+}
 
 /* FORMULARIO */
 
+.formulario {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
 form {
-    border-radius: 10px;
-    color: white;
-    background-color: black;
-    text-align: center;
-    font-size: 16px;
+    padding: 25px;
+    border: 3px solid #d4a017;
+    border-radius: 12px;
+    background-color: rgba(5, 5, 5, 0.94);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: block;
-    margin: auto;
+    font-size: 14px;
+}
+
+fieldset {
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 0 18px;
 }
 
 legend {
     font-family: Street;
-    font-size: 14px;
+    font-size: 15px;
     color: rgb(237, 175, 5);
+    padding: 0 10px;
+    line-height: 1.5;
 }
 
-fieldset {
-    padding: 10px;
-    margin: 15px;
+fieldset > label {
+    display: block;
+    margin: 12px 0 7px;
+    color: #eeeeee;
 }
 
-.botones#input {
-    border: 1 px solid crimson;
-    font-family: Street;
-    font-size: 18px;
+/* CAMPOS */
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    background: #202020;
     color: white;
+    border: 1px solid #666;
     border-radius: 5px;
-    padding-left: 65px;
-    padding-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #ffcc33;
+    outline-offset: 1px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.direccion {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.direccion input {
+    min-width: 0;
+    flex: 1;
+}
+
+.opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 10px;
+}
+
+.opciones label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: crimson;
 }
 
 textarea {
-    width: 560px;
+    min-height: 110px;
+    resize: vertical;
 }
 
+/* BOTONES */
 
-/*
-.elemento label,
-.elemento input {
-    display: inline-block;
-    width: 10rem;
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* Ejemplo de display: inline-block 
-#ejemplo_display {
-    background-color: brown;
-    width: 800px;
-    height: 300px;
-}
-
-.dentro {
-    background-color: yellowgreen;
-    min-width: 100px;
-    border: 1px solid red;
-    display: inline-block;
-}
-
-
-button{
-    border: 1 px solid crimson;
-    background-color: crimson;
+.botones input {
+    padding: 12px 20px;
+    border: 1px solid #ffcc33;
+    border-radius: 6px;
     font-family: Street;
-    font-size: 18px;
-    color: white;
-    border-radius: 5px;
-    padding-left: 65px;
-    padding-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s;
 }
-*/
+
+input[type="submit"] {
+    background-color: crimson;
+    color: white;
+}
+
+input[type="reset"] {
+    background-color: #333;
+    color: white;
+}
+
+.botones input:hover {
+    background-color: #ffcc33;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #aaaaaa;
+    font-family: Street;
+    font-size: 12px;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+        background-attachment: scroll;
+    }
+
+    h1 {
+        margin: 20px auto 30px;
+    }
+
+    table {
+        display: block;
+        padding: 5px;
+        border-width: 4px;
+    }
+
+    tbody {
+        display: block;
+    }
+
+    tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    tr:first-child {
+        display: block;
+    }
+
+    .imagen_fondo {
+        display: block;
+        height: auto;
+        min-height: 80px;
+        padding: 20px 5px;
+    }
+
+    td {
+        display: block;
+        height: auto;
+        min-height: 160px;
+        padding: 10px 4px;
+    }
+
+    .nombre {
+        font-size: 12px;
+    }
+
+    .streetfighter {
+        width: 100%;
+        max-width: 115px;
+        height: 100px;
+    }
+
+    form {
+        padding: 12px;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+
+    .direccion {
+        flex-direction: column;
+    }
+
+    .botones {
+        flex-wrap: wrap;
+    }
+
+    .botones input {
+        font-size: 12px;
+    }
+}
